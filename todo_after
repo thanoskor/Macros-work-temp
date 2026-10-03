@@ -1,0 +1,38 @@
+find the version of the compiler that was used to compile that version of the compiler we are using
+    -(will have to find the bin on windows and not wsl so it works with the ide compiler)
+
+build the plugin with that compiler
+
+change all build configurations to load the plugin -fplugin=./plugin.so
+
+find old build configurations
+    -find a way to transfer them to latest build easily
+        -prob possible because ide is based on open source
+    -partialy build (only preprocessor) because prob wont build
+
+run this plugin for every file and build configuration
+    -will end up with macros.txt for every source file in each configuration
+
+merge the files into one file for each configuration (superset) or keep seperate to make the analysis more finegrained
+
+merge all the depricated configurations into one file, same with the active ones
+
+find the headers that exist in the old but not in the new
+add these headers to already existing script to clear from the code
+
+50/50 this will work as expected
+
+
+--------- Or -------------
+
+diff the board header files
+
+---------- Or ---------
+
+do nothing more than what i already have which will cover the majority of the macros
+
+
+--------- Or ---------
+
+Get someone on the team who knows the products and the code well could fill me in on what features were depricated (and their respective headers) along with the products.
+
